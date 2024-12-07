@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+!node_modules/leaflet/dist/images/marker-icon.png
+!node_modules/leaflet/dist/images/marker-shadow.png
 dist
 dist-ssr
 *.local

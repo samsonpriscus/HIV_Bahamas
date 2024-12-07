@@ -84,7 +84,7 @@ export const organizations: Organization[] = [
     hours: "Monday to Friday: 8:00 AM - 9:00 PM",
     services: [
       "HIV Testing",
-      "Health Counseling"
+      "Counseling Services"
     ]
   },
   {
@@ -105,7 +105,7 @@ export const organizations: Organization[] = [
     hours: "Monday to Friday: 8:00 AM - 9:00 PM",
     services: [
       "HIV Testing",
-      "Sexual Health Counseling"
+      "Counseling Services"
     ]
   },
   {
@@ -126,7 +126,7 @@ export const organizations: Organization[] = [
     hours: "Monday to Friday: 9:00 AM - 5:00 PM",
     services: [
       "HIV Testing",
-      "Education Services"
+      "Education & Awareness"
     ]
   },
   {
@@ -169,7 +169,8 @@ export const organizations: Organization[] = [
     hours: "Monday to Friday: 24hrs",
     services: [
       "HIV Testing",
-      "Health Care"
+      "Health Care",
+      "Basic Health Services"
     ]
   }
 ];

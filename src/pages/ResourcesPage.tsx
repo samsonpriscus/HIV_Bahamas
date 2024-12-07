@@ -4,12 +4,17 @@ import 'leaflet/dist/leaflet.css';
 import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 import { organizations } from '../data/organizations';
 
-// Fix for default Leaflet marker icons (optional but recommended)
+// Fix for default Leaflet marker icons (with custom images)
 import L from 'leaflet';
- import markerIcon from '../assets/images/marker-icon.png';
-  import markerShadow from '../assets/images/marker-shadow.png';
-   L.Icon.Default.mergeOptions({ iconUrl: markerIcon, shadowUrl: markerShadow, }); 
-   const ResourcesPage = () => {
+import markerIcon from '../assets/images/marker-icon.png';
+import markerShadow from '../assets/images/marker-shadow.png';
+
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+
+const ResourcesPage = () => {
   const [selectedService, setSelectedService] = useState('');
 
   // Filter organizations based on the selected service
