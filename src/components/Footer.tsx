@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { Heart } from 'lucide-react';
 import logo from '../assets/images/logopic.png'; // Adjust the path based on where you place the image
 
