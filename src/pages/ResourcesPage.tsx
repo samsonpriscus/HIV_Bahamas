@@ -61,7 +61,7 @@ const ResourcesPage: React.FC = () => {
     (window as any).initMap = () => setMapLoaded(true);
 
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap&libraries=maps,marker&v=beta`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDcpmw6Emr11s5CJMkeuu72bQYCOp4xrDQ&callback=initMap&libraries=maps,marker&v=beta`;
     script.async = true;
     document.head.appendChild(script);
 
