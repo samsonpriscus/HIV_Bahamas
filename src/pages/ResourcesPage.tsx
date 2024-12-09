@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useCallback, useRef, useEffect } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import { organizations } from '../data/organizations';
 
 // Define the types for props and state
@@ -138,52 +138,98 @@ const ResourcesPage: React.FC = () => {
             </div>
           </div>
         </section>
+        </div>
 
-        {/* Resources Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Support Organizations</h2>
-            <div className="grid gap-8">
-              <table className="min-w-full bg-white border border-gray-300">
-                <thead className="bg-red-100">
-                  <tr>
-                    <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Organization</th>
-                    <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Outreach Services</th>
-                    <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Counseling Services</th>
-                    <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Contact Information</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {organizations.map((org, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : ''}>
-                      <td className="border px-6 py-4 text-sm text-gray-700">{org.name}</td>
-                      <td className="border px-6 py-4 text-sm text-gray-700">
-                        {org.services?.join(', ') || 'N/A'}
-                      </td>
-                      <td className="border px-6 py-4 text-sm text-gray-700">{org.counseling || 'N/A'}</td>
-                      <td className="border px-6 py-4 text-sm text-gray-700">
-                        {org.contact?.phone || 'N/A'}<br />
-                        {org.contact?.email || ''}<br />
-                        {org.contact?.website ? (
-                          <a
-                            href={org.contact.website}
-                            className="text-indigo-500 hover:underline"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {org.contact.website}
-                          </a>
-                        ) : ''}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+{/* Resources Section */}
+<section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">Support Organizations</h2>
+    <div className="grid gap-8">
+      <table className="min-w-full bg-white border border-gray-300">
+        <thead className="bg-red-100">
+          <tr>
+            <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Organization</th>
+            <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Outreach Services</th>
+            <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Counseling Services</th>
+            <th className="border px-6 py-3 text-left text-sm font-medium text-gray-700">Contact Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          {organizations.map((org, index) => (
+            <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : ''}>
+              <td className="border px-6 py-4 text-sm text-gray-700">{org.name}</td>
+              <td className="border px-6 py-4 text-sm text-gray-700">
+                {org.services?.join(', ') || 'N/A'}
+              </td>
+              <td className="border px-6 py-4 text-sm text-gray-700">{org.counseling || 'N/A'}</td>
+              <td className="border px-6 py-4 text-sm text-gray-700">
+                {org.contact?.phone || 'N/A'}<br />
+                {org.contact?.email || ''}<br />
+                {org.contact?.website ? (
+                  <a
+                    href={org.contact.website}
+                    className="text-indigo-500 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {org.contact.website}
+                  </a>
+                ) : ''}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{/* Video Tutorials Section */}
+<section className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">Video Tutorials</h2>
+    <div className="grid gap-8">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">How to Use a Condom</h3>
+        <a
+          href="https://youtu.be/K2RKUYnT5T8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-500 hover:underline"
+        >
+          Watch on YouTube
+        </a>
       </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">Understanding PrEP</h3>
+        <a
+          href="https://youtu.be/WaDaOR_hSxQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-500 hover:underline"
+        >
+          Watch on YouTube
+        </a>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">Understanding PEP</h3>
+        <a
+          href="https://youtu.be/19Xrauzfs7s"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-500 hover:underline"
+        >
+          Watch on YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     </ErrorBoundary>
+    
+  
   );
 };
 

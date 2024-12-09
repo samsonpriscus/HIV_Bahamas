@@ -1,7 +1,11 @@
+// pages/HomePage.tsx
+
 import React from 'react';
 import { Activity } from 'lucide-react';
 import StatisticsSection from '../components/sections/StatisticsSection';
 import PreventionCard from '../components/sections/PreventionCard';
+import HIVMythsSection from '../components/sections/HIVMythsSection';
+import AtRiskGroupsSection from '../components/sections/AtRiskGroupsSection'; // Import the new section
 import { preventionTips } from '../data/preventionTips';
 
 const HomePage = () => {
@@ -50,6 +54,12 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* HIV Myths Section */}
+      <HIVMythsSection />
+
+      {/* At Risk Groups Section */}
+      <AtRiskGroupsSection /> {/* Add the new section here */}
     </div>
   );
 };
