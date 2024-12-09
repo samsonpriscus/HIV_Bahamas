@@ -54,12 +54,12 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      
+        {/* At Risk Groups Section */}
+        <AtRiskGroupsSection /> {/* Add the new section here */}
 
       {/* HIV Myths Section */}
       <HIVMythsSection />
-
-      {/* At Risk Groups Section */}
-      <AtRiskGroupsSection /> {/* Add the new section here */}
     </div>
   );
 };
