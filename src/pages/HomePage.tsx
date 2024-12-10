@@ -8,6 +8,9 @@ import HIVMythsSection from '../components/sections/HIVMythsSection';
 import AtRiskGroupsSection from '../components/sections/AtRiskGroupsSection'; // Import the new section
 import { preventionTips } from '../data/preventionTips';
 
+// Import the HIV ribbon image
+import hivRibbon from '../assets/images/hivlog.avif';
+
 const HomePage = () => {
   return (
     <div className="bg-gray-50">
@@ -15,9 +18,17 @@ const HomePage = () => {
       <section className="bg-red-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              HIV Connect
-            </h1>
+            <div className="flex items-center justify-center mb-6">
+              {/* Add the HIV ribbon image */}
+              <img 
+                src={hivRibbon} 
+                alt="HIV Ribbon" 
+                className="w-12 h-12 mr-4"
+              />
+              <h1 className="text-4xl md:text-6xl font-bold">
+                HIV Connect
+              </h1>
+            </div>
             <p className="text-xl md:text-2xl">
               Bridging knowledge and care in The Bahamas
             </p>
@@ -55,8 +66,8 @@ const HomePage = () => {
         </div>
       </section>
       
-        {/* At Risk Groups Section */}
-        <AtRiskGroupsSection /> {/* Add the new section here */}
+      {/* At Risk Groups Section */}
+      <AtRiskGroupsSection /> {/* Add the new section here */}
 
       {/* HIV Myths Section */}
       <HIVMythsSection />
