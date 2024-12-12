@@ -5,8 +5,10 @@ import { Activity } from 'lucide-react';
 import StatisticsSection from '../components/sections/StatisticsSection';
 import PreventionCard from '../components/sections/PreventionCard';
 import HIVMythsSection from '../components/sections/HIVMythsSection';
+import ReferencesSection from "../components/sections/ReferencesSection";
 import AtRiskGroupsSection from '../components/sections/AtRiskGroupsSection'; // Import the new section
 import { preventionTips } from '../data/preventionTips';
+
 
 // Import the HIV ribbon image
 import hivRibbon from '../assets/images/hivlog.avif';
@@ -45,8 +47,7 @@ const HomePage = () => {
           </div>
           <div className="prose lg:prose-xl mx-auto">
             <p className="text-gray-600">
-              HIV (Human Immunodeficiency Virus) affects the immune system, making it harder for the body to fight off infections. Early detection and treatment are crucial for managing HIV and preventing its progression to AIDS. The Bahamas has made significant progress in HIV prevention and treatment, but continued awareness and education remain essential.
-            </p>
+            HIV (Human Immunodeficiency Virus) affects the immune system, making it harder for the body to fight off infections. Early detection and treatment are crucial for managing HIV and preventing its progression to AIDS. The Bahamas has made significant progress in HIV prevention and treatment, but continued awareness and education remain essential (1).            </p>
           </div>
         </div>
       </section>
@@ -71,6 +72,8 @@ const HomePage = () => {
 
       {/* HIV Myths Section */}
       <HIVMythsSection />
+
+      <ReferencesSection />
     </div>
   );
 };
